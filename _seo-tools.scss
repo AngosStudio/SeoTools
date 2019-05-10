@@ -1,0 +1,129 @@
+/*
+utiliza as seguintes variaveis que podem ser configuradas interna ou externamente:
+$cor-primaria: #900;
+$cor-secundaria: #999;
+$fonte-primaria: 'Open Sans';
+*/
+
+.btn-seo-tools{
+    position: fixed;
+    z-index: 99999999999999999999998;
+    bottom: 30px;
+    right: 30px;
+    background: $cor-primaria;
+    color: #FFF;
+
+    &:hover{
+        color: #FFF;
+        filter: brightness(85%);
+    }
+
+    @media all and (max-width: 992px){
+        display: none;
+    }
+}
+
+.seo-tools{
+    display: block;
+    width: 100%;
+    z-index: 99999999999999999999999;
+    background: rgba(255,255,255,0.95);
+    padding: 20px;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: $fonte-primaria;
+
+    .ocorrencias{
+        margin-top: 10px;
+    }
+
+    h2{
+        color: $cor-primaria;
+        line-height: 50px;
+        font-size: 24px;
+
+        small{
+            color: $cor-secundaria;
+            font-size: 12px;
+        }
+    }
+
+    table{
+        font-size: 11px;
+        width: 100% !important;
+
+        thead{
+
+        }
+
+        tbody{
+
+            tr:nth-child(even){
+                background: #EFEFEF;
+            }
+
+            td{
+                padding: 6px 12px;
+                vertical-align: middle;
+
+                &.url{
+                    letter-spacing: -0.5px;
+                }
+
+                &.metas{
+                    .ocorrencias{
+                        > span{
+                            display: block;
+                            font-size: 12px;
+                            margin: 10px;
+
+                            small{
+                                font-size: 11px;
+                                display: block;
+                                color: #999;
+                            }
+
+                            i{
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+
+                &.html{
+
+                    *{
+                        max-width: 200px;
+                        padding: 0;
+                        margin: 0;
+                        position: relative;
+                        float: none;
+                        word-wrap: normal;
+                        font-size: 11px;
+                    }
+
+                    img{
+                        max-width: 70px;
+                        max-height: 70px;
+                    }
+                }
+
+                table{
+                    background: #FFF;
+                    margin-top: 10px;
+
+                    tbody{
+                        tr:nth-child(even){
+                            background: #FFF6F6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
