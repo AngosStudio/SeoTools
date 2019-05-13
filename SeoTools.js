@@ -12,7 +12,7 @@ SeoTools.prototype = {
             $seo_tools.css();
         }
 
-        $('body').append('<button class="btn btn-lg btn-seo-tools rounded-circle"><i class="fab fa-searchengin"></i></button>');
+        $('body').append('<button class="btn btn-lg btn-seo-tools rounded-circle" title="Validar SEO da página"><i class="fab fa-searchengin"></i></button>');
         $('.btn-seo-tools').on('click', function () {
             $seo_tools.validate();
         });
